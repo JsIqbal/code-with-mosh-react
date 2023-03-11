@@ -155,6 +155,30 @@ const fourth = { job: "instructor" };
 
 const combineObject = { ...third, ...fourth, location: "BD" };
 
+// const address = {
+//     name: "Iqbal",
+//     city: "Dhaka",
+//     sector: "Sector-10",
+
+//     personal: {
+//         number: "xxx",
+//     },
+// };
+
+// // const name = address.name; // repetive object
+// // const city = address.city;
+// // const sector = address.sector;
+
+// const { name, city, sector } = address; // non repitive object
+
+// const { city: ct } = address;
+
+// const {
+//     personal: { number: contact },
+// } = address;
+
+// console.log(contact);
+
 // -------class----------
 
 class Person {
@@ -171,25 +195,11 @@ const person = new Person("Iqbal");
 
 // ----inheritance-----
 
-class Person {
-    constructor(name) {
-        this.name = name;
-    }
+// modules -> modularized version of the project
+import { Teacher } from "./teacher";
 
-    walk() {
-        console.log("walk");
-    }
-}
+const teacher = new Teacher("Monsh", "Msc");
 
-class Teacher extends Person {
-    constructor(name, degree) {
-        super(name);
+console.log(teacher.teach());
 
-        this.degree = degree;
-    }
-    teach() {
-        console.log("Teach");
-    }
-}
-
-// modules, named and default exports
+//  named and default exports
